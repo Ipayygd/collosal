@@ -1,26 +1,26 @@
 import Footer from "@/components/sections/Footer";
 import Navbar from "@/components/sections/Navbar";
-import HomepageView from "@/components/views/HomepageView";
+import QuotePageView from "@/components/views/QuotePageView";
 import Image from "next/image";
 
-export default function Home() {
+export default function QuotePage() {
   return (
     <section className="relative hidden lg:block">
-      <div className="absolute h-full w-full z-10">
+      <div className="absolute min-h-screen w-full z-10">
         <Image
-          src="/images/Background.png"
+          src="/images/BackgroundQuote.png"
           alt="Background"
-          width={1000}
-          height={1000}
+          height={100}
+          width={100}
           sizes="100vw"
-          priority
           style={{ width: "100%", height: "auto" }}
-          className="object-cover"
+          priority
+          className="object-contain"
         />
       </div>
       <div className="absolute w-full h-auto z-20 pb-32">
         <Navbar />
-        <HomepageView />
+        <QuotePageView />
         <Footer />
       </div>
     </section>
