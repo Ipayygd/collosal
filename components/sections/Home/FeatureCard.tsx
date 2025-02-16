@@ -2,7 +2,7 @@ import FeatureCard from "@/components/blocks/FeatureCard";
 
 const FeatureSection = () => {
   return (
-    <div className="flex items-center justify-center gap-[20px] mt-[101px]">
+    <div className="flex items-center justify-center gap-[20px] mt-[101px] px-[100px] ">
       <FeatureCard
         title="Design"
         description="The project interface will be designed first, our favorite tool is Figma."
