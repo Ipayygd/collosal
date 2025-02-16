@@ -52,11 +52,11 @@ const Navbar = () => {
             <Link
               href={item.link}
               key={index}
-              className={`text-[16px] text-white/80 hover:text-white transition duration-300 ease-in-out `}
+              className={`text-[16px]  hover:text-white transition duration-300 ease-in-out `}
             >
               <h2
                 className={`${NotoSans.className} ${
-                  pathname === item.link && "text-white"
+                  pathname === item.link ? "text-white" : "text-white/80"
                 }`}
               >
                 {item.title}
