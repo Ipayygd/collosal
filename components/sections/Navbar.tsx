@@ -1,6 +1,9 @@
+"use client";
+
 import { DM_Sans, Noto_Sans } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const DMSans = DM_Sans({ subsets: ["latin"] });
 const NotoSans = Noto_Sans({ subsets: ["latin"] });
@@ -16,7 +19,7 @@ const NavList = [
   },
   {
     title: "Projects",
-    link: "/",
+    link: "/projects",
   },
   {
     title: "About",
@@ -25,6 +28,10 @@ const NavList = [
 ];
 
 const Navbar = () => {
+  const pathname = usePathname();
+
+  console.log(pathname);
+
   return (
     <nav className="px-[207px] mt-[53px] flex items-center">
       <div className="w-full flex items-center justify-between">
@@ -45,9 +52,15 @@ const Navbar = () => {
             <Link
               href={item.link}
               key={index}
-              className="text-[16px] text-white/80 hover:text-white transition duration-300 ease-in-out"
+              className={`text-[16px] text-white/80 hover:text-white transition duration-300 ease-in-out `}
             >
-              <h2 className={`${NotoSans.className} `}>{item.title}</h2>
+              <h2
+                className={`${NotoSans.className} ${
+                  pathname === item.link && "text-white"
+                }`}
+              >
+                {item.title}
+              </h2>
             </Link>
           ))}
         </div>

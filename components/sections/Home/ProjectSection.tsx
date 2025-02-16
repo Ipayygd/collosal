@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const ProjectSection = () => {
   return (
     <div className="px-[208px] mt-[108px]">
@@ -32,9 +34,11 @@ const ProjectSection = () => {
                 A landing page for mobile app
               </p>
 
-              <button className="rounded-full w-[100px] h-[39px] mt-[38px] border">
-                Detail
-              </button>
+              <Link href="/projects/detail">
+                <button className="rounded-full w-[100px] h-[39px] mt-[38px] border">
+                  Detail
+                </button>
+              </Link>
             </div>
           </div>
           {/* Desktop */}
@@ -57,9 +61,11 @@ const ProjectSection = () => {
                 A landing page for desktop app
               </p>
 
-              <button className="rounded-full w-[100px] h-[39px] mt-[38px] border">
-                Detail
-              </button>
+              <Link href="/projects/detail">
+                <button className="rounded-full w-[100px] h-[39px] mt-[38px] border">
+                  Detail
+                </button>
+              </Link>
             </div>
           </div>
         </div>
